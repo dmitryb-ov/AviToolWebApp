@@ -1,1 +1,1 @@
-worker: java -cp target/classes/:target/dependency/* com.avitool.develop.avitool.AvitoolApplication
+web: java $JAVA_OPTS -jar target/avitool-0.0.1-SNAPSHOT.jar --server.port=$PORT $JAR_OPTS
