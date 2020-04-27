@@ -1,1 +1,1 @@
-web: java $JAVA_OPTS -jar target/classes:target/dependency/* com.avitool.develop.avitool.AvitoolApplication
+worker: java -cp target/classes/:target/dependency/* com.avitool.develop.avitool.AvitoolApplication
