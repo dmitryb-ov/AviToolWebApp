@@ -2,8 +2,10 @@
 <title>Главная страница</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/sms-activate_getCountAccessNumbers.js"></script>
+<script type="text/javascript" src="js/copy_buttons.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="css/main_page.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <#include "includes/close_header.ftlh"/>
 <#include "includes/navbar.ftlh"/>
 <#import "spring.ftl" as spring />
@@ -23,21 +25,42 @@
             <form method="post" action="/">
                 <div class="form-group">
                     <label for="login">Логин</label>
-                    <@spring.formInput"account.login""class='form-control' id='login' placeholder='Логин(почта)'"/>
-                    <#--                    <input type="text" class="form-control" id="login" placeholder="Логин(почта)" name="login">-->
+                    <div class="form-row">
+                        <div class="col">
+                            <@spring.formInput"account.login""class='form-control' id='login' placeholder='Логин(почта)'"/>
+                        </div>
+                        <div class="col-1">
+                            <a onclick="copyLogin()" class="btn btn-primary" href="#"><i class="fas fa-copy"></i></a>
+                        </div>
+                        <#--                    <input type="text" class="form-control" id="login" placeholder="Логин(почта)" name="login">-->
+                    </div>
                     <span style="color: red"><@spring.showErrors""/></span>
                 </div>
                 <div class="form-group">
                     <label for="password">Пароль</label>
-                    <@spring.formInput"account.password""class='form-control' id='password' placeholder='Пароль'"/>
-                    <#--                    <input type="text" class="form-control" id="password" value="MyPassw01" name="password">-->
+                    <div class="form-row">
+                        <div class="col">
+                            <@spring.formInput"account.password""class='form-control' id='password' placeholder='Пароль'"/>
+                        </div>
+                        <#--                    <input type="text" class="form-control" id="password" value="MyPassw01" name="password">-->
+                        <div class="col-1">
+                            <a onclick="copyPassword()" class="btn btn-primary" href="#"><i class="fas fa-copy"></i></a>
+                        </div>
+                    </div>
                     <span style="color: red"><@spring.showErrors""/></span>
                 </div>
                 <div class="form-group">
                     <label for="phoneNumber">Номер телефона</label>
-                    <@spring.formInput"account.phoneNumber""class='form-control' id='phoneNumber' placeholder='Номер телефона'"/>
-                    <#--                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">-->
-                    <span style="color: red"><@spring.showErrors""/></span>
+                    <div class="form-row">
+                        <div class="col">
+                            <@spring.formInput"account.phoneNumber""class='form-control' id='phoneNumber' placeholder='Номер телефона'"/>
+                        </div>
+                        <#--                    <input type="text" class="form-control" id="phoneNumber" name="phoneNumber">-->
+                        <div class="col-1">
+                            <a onclick="copyNumber()" class="btn btn-primary" href="#"><i class="fas fa-copy"></i></a>
+                        </div>
+                        <span style="color: red"><@spring.showErrors""/></span>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="name">Имя</label>

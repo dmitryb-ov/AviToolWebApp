@@ -94,7 +94,7 @@ public class MainPageController {
                         .build());
                 aviToolAdsSheetService.sendToAdsSheet(AddAdsDto.builder()
                         .accountId(aviToolAccountDto.getId())
-                        .accountName(aviToolAccountDto.getName())
+                        .accountName(aviToolAccountDto.getLogin())
                         .city("city")
                         .category("catgory")
                         .accountPhoneNumber(aviToolAccountDto.getPhoneNumber())
