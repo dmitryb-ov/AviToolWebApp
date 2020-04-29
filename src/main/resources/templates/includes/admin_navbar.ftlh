@@ -5,15 +5,15 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/admin/users">Пользователи</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Аккаунты</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Объявления</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Google табилица аккаунтов</a>
-            </li>
+            <#--            <li class="nav-item">-->
+            <#--                <a class="nav-link" href="#">Аккаунты</a>-->
+            <#--            </li>-->
+            <#--            <li class="nav-item">-->
+            <#--                <a class="nav-link" href="#">Объявления</a>-->
+            <#--            </li>-->
+            <#--            <li class="nav-item">-->
+            <#--                <a class="nav-link" href="#">Google табилица аккаунтов</a>-->
+            <#--            </li>-->
         </ul>
     </div>
 </nav>

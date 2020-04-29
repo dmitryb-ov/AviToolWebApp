@@ -1,6 +1,8 @@
 package com.avitool.develop.avitool.service;
 
+import com.avitool.develop.avitool.dto.RegistrationDto;
 import com.avitool.develop.avitool.dto.UserDto;
+import com.avitool.develop.avitool.models.Role;
 import com.avitool.develop.avitool.models.User;
 import com.avitool.develop.avitool.repositories.UsersRepository;
 import org.apache.log4j.Logger;
@@ -45,5 +47,36 @@ public class UserServiceImpl implements UserService {
     public User changeUser(User user) {
         logger.info("Change user by id: " + user.getId());
         return usersRepository.save(user);
+    }
+
+    @Override
+    public UserDto addUser(RegistrationDto registrationDto) {
+        User user = User.builder()
+                .login(registrationDto.getLogin())
+                .password(registrationDto.getPassword())
+                .name(registrationDto.getName())
+                .secondName(registrationDto.getSecondName())
+                .role(Role.USER)
+                .build();
+        usersRepository.save(user);
+        return UserDto.from(user);
+    }
+
+    @Override
+    public UserDto getUser(Long userId) {
+        return UserDto.from(usersRepository.getOne(userId));
+    }
+
+    @Override
+    public UserDto getApiUserByLogin(String login) {
+        if (usersRepository.findUserByLogin(login).isPresent()) {
+            return UserDto.from(usersRepository.findUserByLogin(login).get());
+        } else {
+            return UserDto.builder()
+                    .login("null")
+                    .name("null")
+                    .secondName("null")
+                    .build();
+        }
     }
 }

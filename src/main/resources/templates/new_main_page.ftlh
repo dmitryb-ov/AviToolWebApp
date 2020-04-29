@@ -2,7 +2,7 @@
 <title>Главная страница</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <script type="text/javascript" src="js/sms-activate_getCountAccessNumbers.js"></script>
-<script type="text/javascript" src="js/copy_buttons.js"></script>
+<script type="text/javascript" src="js/copy_paste_buttons.js"></script>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"/>
 <link rel="stylesheet" href="css/main_page.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">

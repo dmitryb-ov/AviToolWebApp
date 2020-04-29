@@ -5,12 +5,12 @@
             <li class="nav-item active">
                 <a class="nav-link" href="/profile">Профиль</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Настройки</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/dz">Дз</a>
-            </li>
+            <#--            <li class="nav-item">-->
+            <#--                <a class="nav-link" href="#">Настройки</a>-->
+            <#--            </li>-->
+            <#--            <li class="nav-item">-->
+            <#--                <a class="nav-link" href="/dz">Дз</a>-->
+            <#--            </li>-->
         </ul>
     </div>
     <form class="form-inline" method="post" action="/logout">

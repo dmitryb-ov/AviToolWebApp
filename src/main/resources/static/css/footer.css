@@ -1,0 +1,26 @@
+.blue {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+main {
+    padding-bottom: 50px;
+    /*Высота футера*/
+}
+
+footer {
+    margin-top: 20px;
+    /*Минус Высота футера*/
+    height: 50px;
+    /*Высота футера*/
+}

@@ -1,5 +1,6 @@
 package com.avitool.develop.avitool.service;
 
+import com.avitool.develop.avitool.dto.RegistrationDto;
 import com.avitool.develop.avitool.dto.UserDto;
 import com.avitool.develop.avitool.models.User;
 
@@ -16,4 +17,10 @@ public interface UserService {
     Optional<User> getUserById(Long userId);
 
     User changeUser(User user);
+
+    UserDto addUser(RegistrationDto registrationDto);
+
+    UserDto getUser(Long userId);
+
+    UserDto getApiUserByLogin(String login);
 }

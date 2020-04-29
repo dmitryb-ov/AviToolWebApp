@@ -1,6 +1,7 @@
 <#import "/spring.ftl" as spring/>
 <#include "includes/header.ftlh">
 <title>Login</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 <#include "includes/close_header.ftlh">
 <#import "spring.ftl" as spring />
 <#--<#import "spring.ftl" as spring />-->
@@ -34,7 +35,7 @@
                     </#if>
                 </div>
                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                <input class="btn btn-primary my-2 my-sm-0" type="submit" value="Вход"
+                <input id="enter" class="btn btn-primary my-2 my-sm-0" type="submit" value="Вход"
                        style="display: table;margin: 0 auto">
             </form>
         </div>

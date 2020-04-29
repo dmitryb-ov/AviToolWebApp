@@ -53,7 +53,6 @@ public class AdminUsersController {
                     refreshUser.setRole(Role.USER);
                     userService.changeUser(refreshUser);
                 }
-                return "redirect:/";
             }
             if (choose.equals(DELETE_USER)) {
                 Optional<User> user = userService.getUserById(Long.parseLong(id));
@@ -62,7 +61,6 @@ public class AdminUsersController {
                     Long myUserId = userDetails.getUser().getId();
                     if (Long.parseLong(id) == myUserId) {
                         userService.deleteUser(Long.parseLong(id));
-                        return "redirect:/";
                     }
                     userService.deleteUser(Long.parseLong(id));
                 }
